@@ -13,7 +13,7 @@ Imagine a team builds one support assistant that drafts replies to customer tick
 
 That is the role of LLMOps.
 
-![Generated illustration: LLMOps operating loop](assets/01_llmops_operating_loop.svg)
+<img src="assets/01_what_is_llmops.png" alt="Generated illustration: LLMOps operating loop" style="width: 50%; height: auto;" />
 
 LLMOps is the operating discipline around LLM applications. It does not replace product design, software engineering, or model research. It connects them into a workflow that can be repeated, tested, monitored, and improved.
 
@@ -28,7 +28,7 @@ Traditional MLOps focuses on the machine learning lifecycle: ingest data, valida
 
 LLM system design is broader. It asks how the entire application works: user interface, backend, database, retrieval system, authentication, feedback collection, rate limits, and user experience. LLMOps is narrower and more operational: how we manage the LLM-related artifacts and workflow.
 
-![Generated illustration: MLOps for LLMs versus LLM system design](assets/02_llmops_vs_system_design.svg)
+<img src="assets/02_mlops_framework.png" alt="Generated illustration: MLOps for LLMs versus LLM system design" style="width: 50%; height: auto;" />
 
 | Area | Main question | Example decisions |
 |---|---|---|
@@ -47,7 +47,7 @@ The **online loop** handles the actual user request. It may clean or chunk the i
 
 The **offline improvement loop** uses logs, feedback, examples, and evaluations to improve the system. This is where we prepare datasets, compare prompt templates, tune or adapt models, run evaluations, and decide whether a new version is safe to release.
 
-![Generated illustration: LLM application architecture](assets/03_llm_application_architecture.svg)
+<img src="assets/03_llmops_vs_llm_system_design.png" alt="Generated illustration: LLM application architecture" style="width: 50%; height: auto;" />
 
 In the support assistant example, the online loop may take Linda’s customer ticket and draft a helpful reply. The offline loop may later use reviewed tickets to improve the assistant. These two loops should not be confused. The online loop is about serving the user now. The offline loop is about making the next version better.
 
@@ -60,7 +60,7 @@ In the support assistant example, the online loop may take Linda’s customer ti
 
 A pipeline is the repeatable factory behind the LLM part of the product. It can prepare data, create training and evaluation files, configure a tuning or adaptation job, deploy a model or prompt version, and run checks before release.
 
-![Generated illustration: simplified LLMOps pipeline](assets/04_simplified_llmops_pipeline.svg)
+<img src="assets/04_llm_application_architecture.png" alt="Generated illustration: simplified LLMOps pipeline" style="width: 50%; height: auto;" />
 
 This diagram hides a lot of detail, but the logic is simple. We start with data preparation and versioning. Then we define a workflow with parameters. That workflow becomes an artifact, often a YAML file, JSON manifest, or pipeline specification. The artifact is executed by a pipeline engine. If it succeeds, the output can be a model endpoint, a prompt template release, a report, or a deployment candidate.
 
@@ -74,7 +74,7 @@ LLM work often begins with text data: support tickets, chat conversations, produ
 
 A better pattern is to keep large data where it already lives, transform it there, and export only the prepared artifacts needed for training or evaluation.
 
-![Generated illustration: data storage and lineage](assets/05_data_lives_lineage.svg)
+<img src="assets/05_simplified_llmops_pipeline.png" alt="Generated illustration: data storage and lineage" style="width: 50%; height: auto;" />
 
 For a support assistant, the raw data might live in a data warehouse. The warehouse has tables like `tickets`, `agent_replies`, and `ticket_metadata`. SQL is useful here because filtering, joining, and cleaning can happen close to the data instead of pulling millions of rows into memory.
 
@@ -104,7 +104,7 @@ This instruction is not just wording. It is part of the data contract. If the mo
 
 Once data has been selected and transformed, it is usually exported into training and evaluation artifacts. For beginner projects, JSONL is often the easiest format because each line is one JSON object and it is easy to inspect. For larger datasets, Parquet or framework-specific formats can be more efficient.
 
-![Generated illustration: training and evaluation file formats](assets/06_file_formats.svg)
+<img src="assets/06_where_data_lives.png" alt="Generated illustration: training and evaluation file formats" style="width: 50%; height: auto;" />
 
 | Format | Good beginner use | When to reconsider |
 |---|---|---|
@@ -114,7 +114,7 @@ Once data has been selected and transformed, it is usually exported into trainin
 
 The second important habit is versioning. Versioning is not only for models. It applies to datasets, prompts, evaluation sets, configuration files, pipeline specs, and deployment manifests.
 
-![Generated illustration: versioning artifacts](assets/07_versioning_artifacts.svg)
+<img src="assets/07_training_data_formats_versioning.png" alt="Generated illustration: versioning artifacts" style="width: 50%; height: auto;" />
 
 A useful artifact name is descriptive. A useful manifest is even better. For example, `support_reply_train_2026-06-09.jsonl` tells you roughly what the file is. A manifest tells you where it came from, which query produced it, what split seed was used, what prompt template was attached, and which evaluation set should be used with it.
 
@@ -131,7 +131,7 @@ Two words appear constantly in LLMOps: orchestration and automation. They are re
 
 **Automation** runs those steps without a person manually copy-pasting commands from one notebook cell to another.
 
-![Generated illustration: components and pipelines using Linda](assets/08_components_pipeline_linda.svg)
+<img src="assets/08_components_pipelines_data_flow_linda.png" alt="Generated illustration: components and pipelines using Linda" style="width: 50%; height: auto;" />
 
 A beginner pipeline can start with two normal Python functions. One function creates a greeting for Linda. The second function takes the greeting and adds support context. In a real workflow, replace those toy components with steps like `prepare_dataset`, `validate_jsonl`, `run_evaluation`, and `register_release_candidate`.
 
@@ -155,7 +155,7 @@ final_prompt = add_support_context(
 
 In real pipeline frameworks, the objects can look more complex. A component may return a task object, an output reference, or a file URI. For large data, the best practice is often not to pass the actual dataset between steps. Pass the location.
 
-![Generated illustration: passing data by location](assets/10_pass_data_by_location.svg)
+<img src="assets/09_pass_data_by_location.png" alt="Generated illustration: passing data by location" style="width: 50%; height: auto;" />
 
 This one pattern prevents many scaling problems. Instead of sending a huge dataframe through the pipeline graph, write the data to object storage and pass `s3://...`, `gs://...`, or another URI to the next component.
 
@@ -165,7 +165,7 @@ This one pattern prevents many scaling problems. Instead of sending a huge dataf
 
 When a pipeline runs in production, it may not run on your laptop. One component may run in CI, another on a cloud worker, another on a GPU machine. This is why containers matter.
 
-![Generated illustration: containers make pipeline steps portable](assets/09_containers_portability.svg)
+<img src="assets/10_containers_matter.png" alt="Generated illustration: containers make pipeline steps portable" style="width: 50%; height: auto;" />
 
 A container packages the code, dependencies, and runtime needed by a step. This does not magically solve all environment problems, but it makes the environment explicit. The same component can be executed more consistently across machines.
 
@@ -221,8 +221,6 @@ That mismatch can reduce quality because the production input no longer matches 
 ## 10. Safety, evaluation, and monitoring
 
 Once the model is deployed, the work is not over. LLM applications need monitoring because the environment around them changes: users ask new things, costs shift, latency changes, providers update models, documents become stale, and prompt templates evolve.
-
-![Generated illustration: monitoring signals](assets/11_monitoring_signals.svg)
 
 A practical monitoring setup usually combines several signal types.
 
