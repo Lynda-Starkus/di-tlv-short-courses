@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Training and evaluation file formats">
+  <!-- Generated white-background course illustration; source screenshots are references only, not reused. -->
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5B667A" />
+    </marker>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3B82F6" />
+    </marker>
+    <style>
+      .title { font: 700 34px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #172033; }
+      .subtitle { font: 500 17px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .label { font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #172033; }
+      .small { font: 500 14px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .tiny { font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .mono { font: 600 15px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #172033; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="70" y="70" class="title">Choosing a training/evaluation file format</text>
+<text x="70" y="105" class="subtitle" text-anchor="start">
+<tspan x="70" dy="0">The format is an operations choice: readability, size, streaming speed and tooling compatibility all</tspan>
+<tspan x="70" dy="24">matter.</tspan>
+</text><rect x="70" y="150" width="1060" height="460" rx="24" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" filter="url(#shadow)"/><rect x="90" y="185" width="1015" height="55" rx="14" fill="#DBEAFE"/><text x="90" y="220" class="label" text-anchor="start">
+<tspan x="90" dy="0">Format</tspan>
+</text><text x="310" y="220" class="label" text-anchor="start">
+<tspan x="310" dy="0">Best for</tspan>
+</text><text x="720" y="220" class="label" text-anchor="start">
+<tspan x="720" dy="0">Tradeoff</tspan>
+</text><line x1="90" y1="251" x2="1105" y2="251" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/><text x="90" y="275" class="label" text-anchor="start">
+<tspan x="90" dy="0">JSONL</tspan>
+</text><text x="310" y="275" class="small" text-anchor="start">
+<tspan x="310" dy="0">Small/medium text datasets and easy</tspan>
+<tspan x="310" dy="18">inspection</tspan>
+</text><text x="720" y="275" class="small" text-anchor="start">
+<tspan x="720" dy="0">Bigger than binary formats; schema is</tspan>
+<tspan x="720" dy="18">informal</tspan>
+</text><line x1="90" y1="356" x2="1105" y2="356" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/><text x="90" y="380" class="label" text-anchor="start">
+<tspan x="90" dy="0">Parquet</tspan>
+</text><text x="310" y="380" class="small" text-anchor="start">
+<tspan x="310" dy="0">Large tabular datasets, analytics,</tspan>
+<tspan x="310" dy="18">repeated filtering</tspan>
+</text><text x="720" y="380" class="small" text-anchor="start">
+<tspan x="720" dy="0">Less human-readable; needs compatible</tspan>
+<tspan x="720" dy="18">tooling</tspan>
+</text><line x1="90" y1="461" x2="1105" y2="461" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/><text x="90" y="485" class="label" text-anchor="start">
+<tspan x="90" dy="0">TFRecord</tspan>
+</text><text x="310" y="485" class="small" text-anchor="start">
+<tspan x="310" dy="0">TensorFlow-heavy training pipelines</tspan>
+</text><text x="720" y="485" class="small" text-anchor="start">
+<tspan x="720" dy="0">Less convenient outside TensorFlow</tspan>
+<tspan x="720" dy="18">ecosystems</tspan>
+</text><rect x="120" y="635" width="960" height="45" rx="14" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/><text x="600" y="663" class="small" text-anchor="middle">
+<tspan x="600" dy="0">Beginner rule: start with JSONL for clarity; move to Parquet/TFRecord when size or speed becomes the real</tspan>
+<tspan x="600" dy="18">bottleneck.</tspan>
+</text></svg>

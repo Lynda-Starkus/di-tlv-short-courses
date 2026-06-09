@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-label="LLM application architecture">
+  <!-- Generated white-background course illustration; source screenshots are references only, not reused. -->
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5B667A" />
+    </marker>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3B82F6" />
+    </marker>
+    <style>
+      .title { font: 700 34px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #172033; }
+      .subtitle { font: 500 17px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .label { font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #172033; }
+      .small { font: 500 14px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .tiny { font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .mono { font: 600 15px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #172033; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="70" y="70" class="title">A production LLM application has two loops</text>
+<text x="70" y="105" class="subtitle" text-anchor="start">
+<tspan x="70" dy="0">The user sees one answer. Behind it, there is an online response loop and an offline improvement</tspan>
+<tspan x="70" dy="24">loop.</tspan>
+</text><rect x="70" y="160" width="300" height="560" rx="28" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/><rect x="420" y="160" width="610" height="560" rx="28" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" filter="url(#shadow)"/><rect x="1080" y="160" width="250" height="560" rx="28" fill="#D1FAE5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/><text x="220" y="205" class="label" text-anchor="middle">
+<tspan x="220" dy="0">User experience</tspan>
+</text><text x="725" y="205" class="label" text-anchor="middle">
+<tspan x="725" dy="0">Application backend</tspan>
+</text><text x="1205" y="205" class="label" text-anchor="middle">
+<tspan x="1205" dy="0">Model improvement</tspan>
+</text><rect x="115" y="270" width="210" height="80" rx="18" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
+<text x="220.0" y="306.0" class="label" text-anchor="middle">
+<tspan x="220.0" dy="0">User input</tspan>
+</text><rect x="115" y="550" width="210" height="80" rx="18" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" filter="url(#shadow)"/>
+<text x="220.0" y="586.0" class="label" text-anchor="middle">
+<tspan x="220.0" dy="0">Final answer</tspan>
+</text><rect x="465" y="270" width="180" height="80" rx="18" fill="#FEE2E2" stroke="#EF4444" stroke-width="2" filter="url(#shadow)"/>
+<text x="555.0" y="306.0" class="label" text-anchor="middle">
+<tspan x="555.0" dy="0">Pre-process</tspan>
+<tspan x="555.0" dy="20">clean + chunk</tspan>
+</text><rect x="680" y="270" width="180" height="80" rx="18" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" filter="url(#shadow)"/>
+<text x="770.0" y="306.0" class="label" text-anchor="middle">
+<tspan x="770.0" dy="0">Grounding</tspan>
+<tspan x="770.0" dy="20">retrieved context</tspan>
+</text><rect x="680" y="455" width="180" height="80" rx="18" fill="#D1FAE5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+<text x="770.0" y="491.0" class="label" text-anchor="middle">
+<tspan x="770.0" dy="0">Model call</tspan>
+<tspan x="770.0" dy="20">base or tuned</tspan>
+</text><rect x="465" y="550" width="180" height="80" rx="18" fill="#FEE2E2" stroke="#EF4444" stroke-width="2" filter="url(#shadow)"/>
+<text x="555.0" y="586.0" class="label" text-anchor="middle">
+<tspan x="555.0" dy="0">Post-process</tspan>
+<tspan x="555.0" dy="20">format +</tspan>
+<tspan x="555.0" dy="20">guardrails</tspan>
+</text><rect x="850" y="455" width="135" height="80" rx="18" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
+<text x="917.5" y="491.0" class="label" text-anchor="middle">
+<tspan x="917.5" dy="0">Logs</tspan>
+<tspan x="917.5" dy="20">traces</tspan>
+<tspan x="917.5" dy="20">feedback</tspan>
+</text><rect x="1125" y="275" width="160" height="70" rx="18" fill="#FFFFFF" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+<text x="1205.0" y="306.0" class="label" text-anchor="middle">
+<tspan x="1205.0" dy="0">Prepare data</tspan>
+</text><rect x="1125" y="405" width="160" height="70" rx="18" fill="#FFFFFF" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+<text x="1205.0" y="436.0" class="label" text-anchor="middle">
+<tspan x="1205.0" dy="0">Tune or adapt</tspan>
+</text><rect x="1125" y="535" width="160" height="70" rx="18" fill="#FFFFFF" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+<text x="1205.0" y="566.0" class="label" text-anchor="middle">
+<tspan x="1205.0" dy="0">Evaluate</tspan>
+</text><line x1="325" y1="310" x2="455" y2="310" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="645" y1="310" x2="670" y2="310" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="770" y1="350" x2="770" y2="445" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="680" y1="495" x2="645" y2="570" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="465" y1="590" x2="325" y2="590" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="850" y1="495" x2="820" y2="495" stroke="#3B82F6" stroke-width="False" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="985" y1="495" x2="1115" y2="570" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="1205" y1="345" x2="1205" y2="395" stroke="#10B981" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="1205" y1="475" x2="1205" y2="525" stroke="#10B981" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><path d="M1125 570 C1050 670 820 690 770 535" fill="none" stroke="#10B981" stroke-width="4" marker-end="url(#arrow)" stroke-dasharray="8 8"/>
+<text x="725" y="735" class="label" text-anchor="middle">
+<tspan x="725" dy="0">Online loop: answer the user. Offline loop: improve the system with data, experiments and</tspan>
+<tspan x="725" dy="22">evaluations.</tspan>
+</text></svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-label="LLMOps pipeline simplified">
+  <!-- Generated white-background course illustration; source screenshots are references only, not reused. -->
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5B667A" />
+    </marker>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3B82F6" />
+    </marker>
+    <style>
+      .title { font: 700 34px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #172033; }
+      .subtitle { font: 500 17px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .label { font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #172033; }
+      .small { font: 500 14px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .tiny { font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .mono { font: 600 15px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #172033; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="70" y="70" class="title">A simplified LLMOps pipeline</text>
+<text x="70" y="105" class="subtitle" text-anchor="start">
+<tspan x="70" dy="0">The pipeline is not the app. It is the repeatable factory that prepares, tests and releases the LLM part of</tspan>
+<tspan x="70" dy="24">the app.</tspan>
+</text><rect x="130" y="235" width="210" height="95" rx="18" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" filter="url(#shadow)"/>
+<text x="235.0" y="278.5" class="label" text-anchor="middle">
+<tspan x="235.0" dy="0">Data prep</tspan>
+<tspan x="235.0" dy="20">+ versioning</tspan>
+</text><rect x="405" y="235" width="210" height="95" rx="18" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" filter="url(#shadow)"/>
+<text x="510.0" y="278.5" class="label" text-anchor="middle">
+<tspan x="510.0" dy="0">Pipeline design</tspan>
+<tspan x="510.0" dy="20">workflow +</tspan>
+<tspan x="510.0" dy="20">parameters</tspan>
+</text><rect x="720" y="235" width="210" height="95" rx="18" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
+<text x="825.0" y="278.5" class="label" text-anchor="middle">
+<tspan x="825.0" dy="0">Artifact</tspan>
+<tspan x="825.0" dy="20">YAML / manifest</tspan>
+</text><rect x="250" y="510" width="210" height="95" rx="18" fill="#D1FAE5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+<text x="355.0" y="553.5" class="label" text-anchor="middle">
+<tspan x="355.0" dy="0">Execute</tspan>
+<tspan x="355.0" dy="20">pipeline run</tspan>
+</text><rect x="530" y="510" width="210" height="95" rx="18" fill="#D1FAE5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+<text x="635.0" y="553.5" class="label" text-anchor="middle">
+<tspan x="635.0" dy="0">Deploy</tspan>
+<tspan x="635.0" dy="20">model endpoint</tspan>
+</text><rect x="810" y="510" width="210" height="95" rx="18" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
+<text x="915.0" y="553.5" class="label" text-anchor="middle">
+<tspan x="915.0" dy="0">Prompting</tspan>
+<tspan x="915.0" dy="20">+ prediction</tspan>
+</text><rect x="1090" y="510" width="210" height="95" rx="18" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" filter="url(#shadow)"/>
+<text x="1195.0" y="553.5" class="label" text-anchor="middle">
+<tspan x="1195.0" dy="0">Safety</tspan>
+<tspan x="1195.0" dy="20">+ monitoring</tspan>
+</text><line x1="340" y1="282" x2="395" y2="282" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="615" y1="282" x2="710" y2="282" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="825" y1="330" x2="355" y2="465" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="460" y1="558" x2="520" y2="558" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="740" y1="558" x2="800" y2="558" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><line x1="1020" y1="558" x2="1080" y2="558" stroke="#5B667A" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/><path d="M120 170 Q520 120 920 170" fill="none" stroke="#5B667A" stroke-width="3" stroke-linecap="round"/>
+<text x="520" y="150" class="label" text-anchor="middle">
+<tspan x="520" dy="0">orchestration: define order and dependencies</tspan>
+</text><path d="M145 650 Q430 705 740 650" fill="none" stroke="#5B667A" stroke-width="3" stroke-linecap="round"/>
+<text x="445" y="700" class="label" text-anchor="middle">
+<tspan x="445" dy="0">automation: run it without manual copy-paste</tspan>
+</text><rect x="1010" y="180" width="310" height="120" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/><text x="1035" y="215" class="label" text-anchor="start">
+<tspan x="1035" dy="0">Run manifest</tspan>
+</text><text x="1035" y="248" class="small" text-anchor="start">
+<tspan x="1035" dy="0">dataset_uri, model_name,</tspan>
+<tspan x="1035" dy="18">prompt_template_version,</tspan>
+<tspan x="1035" dy="18">eval_thresholds, owner</tspan>
+</text></svg>

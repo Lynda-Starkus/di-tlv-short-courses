@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="Versioning artifacts">
+  <!-- Generated white-background course illustration; source screenshots are references only, not reused. -->
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5B667A" />
+    </marker>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3B82F6" />
+    </marker>
+    <style>
+      .title { font: 700 34px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #172033; }
+      .subtitle { font: 500 17px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .label { font: 700 18px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #172033; }
+      .small { font: 500 14px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .tiny { font: 500 12px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial; fill: #5B667A; }
+      .mono { font: 600 15px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #172033; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="70" y="70" class="title">Versioning artifacts</text>
+<text x="70" y="105" class="subtitle" text-anchor="start">
+<tspan x="70" dy="0">An LLMOps run creates more than a model. It creates a chain of artifacts you may need to reproduce,</tspan>
+<tspan x="70" dy="24">compare or roll back.</tspan>
+</text><rect x="180" y="210" width="320" height="75" rx="18" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/><text x="340" y="256" class="mono" text-anchor="middle">
+<tspan x="340" dy="0">train_data_v1.jsonl</tspan>
+</text><rect x="265" y="280" width="320" height="75" rx="18" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/><text x="425" y="326" class="mono" text-anchor="middle">
+<tspan x="425" dy="0">train_data_v2.jsonl</tspan>
+</text><rect x="350" y="350" width="320" height="75" rx="18" fill="#D1FAE5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/><text x="510" y="396" class="mono" text-anchor="middle">
+<tspan x="510" dy="0">eval_set_v1.jsonl</tspan>
+</text><rect x="525" y="250" width="320" height="75" rx="18" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" filter="url(#shadow)"/><text x="685" y="296" class="mono" text-anchor="middle">
+<tspan x="685" dy="0">prompt_template_v2</tspan>
+</text><rect x="610" y="325" width="320" height="75" rx="18" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2" filter="url(#shadow)"/><text x="770" y="371" class="mono" text-anchor="middle">
+<tspan x="770" dy="0">model_support_bot_v3</tspan>
+</text><rect x="725" y="400" width="320" height="75" rx="18" fill="#FEE2E2" stroke="#EF4444" stroke-width="2" filter="url(#shadow)"/><text x="885" y="446" class="mono" text-anchor="middle">
+<tspan x="885" dy="0">run_manifest.json</tspan>
+</text><rect x="120" y="570" width="960" height="80" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/><text x="150" y="605" class="small" text-anchor="start">
+<tspan x="150" dy="0">A good version name tells you what it is. A good manifest tells you why it exists: source query, split</tspan>
+<tspan x="150" dy="20">seed, template version, evaluation result, and deployment target.</tspan>
+</text></svg>
